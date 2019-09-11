@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let diceArray = ["dice1","dice2","dice3","dice4","dice5"]
+   
+    let diceArray = ["dice1","dice2","dice3","dice4","dice5"]  //file names of dice pictures
     var randomDiceIndex1: Int = 0
     var randomDiceIndexView2: Int = 0
     
@@ -25,18 +26,11 @@ class ViewController: UIViewController {
     
     @IBAction func rollButtonPressed(_ sender: Any) {
         
-        
-        
         randomDiceIndex1 = Int.random(in: 0...4)
         randomDiceIndexView2 = Int.random(in: 0...4)
+        
         diceView1.image = UIImage(named:diceArray[randomDiceIndex1])
-        
         diceView2.image = UIImage(named: diceArray[randomDiceIndexView2])
-        
-        
     }
-    
-
-
 }
 

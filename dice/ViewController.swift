@@ -27,6 +27,11 @@ class ViewController: UIViewController {
         updateDiceImage()
     }
     
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event:UIEvent?) {
+        
+        updateDiceImage()
+    }
+    
     func updateDiceImage(){ //changes image of both dice
         
         randomDiceIndex1 = Int.random(in: 0...4)

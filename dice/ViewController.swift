@@ -17,20 +17,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceView1: UIImageView!
     @IBOutlet weak var diceView2: UIImageView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+        updateDiceImage()
     }
     
     @IBAction func rollButtonPressed(_ sender: Any) {
+        
+        updateDiceImage()
+    }
+    
+    func updateDiceImage(){ //changes image of both dice
         
         randomDiceIndex1 = Int.random(in: 0...4)
         randomDiceIndexView2 = Int.random(in: 0...4)
         
         diceView1.image = UIImage(named:diceArray[randomDiceIndex1])
         diceView2.image = UIImage(named: diceArray[randomDiceIndexView2])
+        
     }
 }
 
